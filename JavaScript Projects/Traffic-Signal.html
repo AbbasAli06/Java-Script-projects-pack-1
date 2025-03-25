@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Traffic Signal</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .traffic-light {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .light {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #555;
+        }
+
+        .red.active { background: #ff0000; }
+        .yellow.active { background: #ffff00; }
+        .green.active { background: #00ff00; }
+        .black {
+            background: #000;
+            opacity: 0.3;
+            position: relative;
+        }
+
+        .black::after {
+            content: "✖";
+            position: absolute;
+            color: red;
+            font-size: 24px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="traffic-light">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            <div class="light black"></div>
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="startCycle()">Start</button>
+        <button onclick="stopCycle()">Stop</button>
+    </div>
+    <script src="Traffic Signal.js"></script>
+</body>
+</html>

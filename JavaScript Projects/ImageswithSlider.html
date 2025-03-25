@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Slideshow</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="slideshow-container relative w-full h-screen">
+    <div class="carousel-track flex w-full h-full">
+        <div class="carousel-slide w-full h-full">
+            <img src="Roses-1.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="carousel-slide w-full h-full">
+            <img src="Manhattan+Beach-4.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="carousel-slide w-full h-full">
+            <img src="After+reflection-1.jpg" class="w-full h-full object-cover">
+        </div>
+    </div>
+    <button type="button" class="prev absolute top-1/2 left-0 z-10 bg-gray-100 p-2 rounded-full shadow" onclick="plusSlides(-1)">
+        <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button type="button" class="next absolute top-1/2 right-0 z-10 bg-gray-100 p-2 rounded-full shadow" onclick="plusSlides(1)">
+        <span class="sr-only">Next</span>
+        <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+    </button>
+    <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3">
+        <span class="dot rounded-full bg-gray-100 p-2 cursor-pointer" onclick="currentSlide(1)"></span>
+        <span class="dot rounded-full bg-gray-100 p-2 cursor-pointer" onclick="currentSlide(2)"></span>
+        <span class="dot rounded-full bg-gray-100 p-2 cursor-pointer" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+<script src="Images with Slider.js"></script>
+</body>
+</html>

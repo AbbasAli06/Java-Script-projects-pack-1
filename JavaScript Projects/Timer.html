@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <!-- Timer Display -->
+        <div class="text-center mb-6">
+            <div id="timer" class="text-6xl font-bold text-indigo-600">05:00</div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex justify-center space-x-4 mb-6">
+            <button onclick="startTimer()" id="startBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                Start
+            </button>
+            <button onclick="pauseTimer()" id="pauseBtn" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+                Pause
+            </button>
+            <button onclick="resetTimer()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                Reset
+            </button>
+        </div>
+
+        <!-- Input Section -->
+        <div class="space-y-4">
+            <div class="flex space-x-2">
+                <input type="number" id="minutes" placeholder="Minutes" 
+                    class="w-1/2 p-2 border rounded" min="0" max="60">
+                <input type="number" id="seconds" placeholder="Seconds" 
+                    class="w-1/2 p-2 border rounded" min="0" max="59">
+            </div>
+            <button onclick="setCustomTime()" 
+                class="w-full bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">
+                Set Custom Time
+            </button>
+        </div>
+    </div>
+
+    <!-- Alarm Sound (hidden) -->
+    <audio id="alarm" src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwNAAAAAAAAAAAAAAA//tQxAADB8AhSmxhIIEVCSiJrDCQBTcu3UrAIwUdkACShsJAjAgqTZvECMIUCIglBqDgGkNQ9BwjSDEwHKCHBHEySYORiBwExUAhDDQjGYOCCCEwYqDwYkj//////////////////////7ksTZln3///////////////////////6E9CmxhIIA=="></audio>
+<script src="Timer.js"></script>
+</body>
+</html>
